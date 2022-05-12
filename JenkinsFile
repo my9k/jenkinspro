@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Application Build'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Test Application'
+            }
+        }
+        stage('Deployment') {
+            steps {
+                echo 'Application Deployed'
+            }
+        }
+    }
+    
+    post{
+        always{
+            emailext body: 'Successful', subject: 'Deployed ', to: 'my9ktripathi@gmail.com'
+        }
+    }
+}
