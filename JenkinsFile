@@ -21,7 +21,7 @@ pipeline {
     
     post{
         always{
-            emailext body: 'Successful', subject: 'Deployed ', to: 'my9ktripathi@gmail.com'
+            mail bcc: '', body: 'Your build is successful', cc: '', from: '', replyTo: '', subject: 'Completion', to: 'my9ktripathi@gmial.com'
         }
     }
 }
