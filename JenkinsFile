@@ -21,8 +21,8 @@ pipeline {
     
     post{
         always{
-           // mail bcc: '', body: 'Your build is successful', cc: '', from: '', replyTo: '', subject: 'Completion', to: 'mayanktripathistmt3181@gmail.com'
-           emailext body: 'Your deployment is successful', subject: 'compiete', to: 'mayanktripathistmt3181@gmail.com'
+            mail bcc: '', body: 'Your build is successful', cc: '', from: '', replyTo: '', subject: 'Completion', to: 'mayanktripathistmt3181@gmail.com'
+           
         }
     }
 }
